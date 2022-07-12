@@ -6,7 +6,7 @@
 #
 #     Find the last ten digits of the series, 1^1 + 2^2 + 3^3 + ... + 1000^1000.
 
-def ten_digits(x):
+def ten_digits(x: int) -> int:
     """
     Returns the last 10 digits of x^x as an int.
 
@@ -14,7 +14,7 @@ def ten_digits(x):
         x (int): Natural number
 
     Returns:
-        x^x mod 10^10
+        (int): x^x mod 10^10
     """
     # Binary exponentiation in mod 10^10
     digits = 1
@@ -27,7 +27,7 @@ def ten_digits(x):
     return digits
 
 
-def main(n):
+def main(n: int) -> int:
     """
     Returns the last 10 digits of the series 1^1 + 2^2 + ... + `n`^`n`
 
@@ -35,10 +35,10 @@ def main(n):
         n (int): Natural number
 
     Returns:
-        Last ten digits of 1^1 + 2^2 + ... + `n`^`n`
+        (int): Last ten digits of 1^1 + 2^2 + ... + `n`^`n`
 
     Raises:
-        AssertError: if any incorrect args are given
+        AssertError: if incorrect args are given
     """
     assert type(n) == int and n > 0
 
